@@ -10,7 +10,6 @@ public class ProjectileDamage : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if ((other.gameObject.tag == "Enemy" && damageEnemy) || (other.gameObject.tag == "Player" && damagePlayer)){
-			Debug.Log("Hit!");
 			other.gameObject.SendMessage("ApplyDamage", strength);
 			Destroy(this.gameObject);
 		}

@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Aim : AbstractBehaviour {
+public class Aim : MonoBehaviour {
 	
 	[SerializeField] protected Transform itemBeingAimed;
 	[SerializeField] protected Transform target;
 
 	protected virtual void Update () {
-		itemBeingAimed.rotation = Quaternion.Euler(0f, 0f, GetRotZ(target.position) - 90);
+		if (target) itemBeingAimed.rotation = Quaternion.Euler(0f, 0f, GetRotZ(target.position) - 90);
 	}
 
 	protected float GetRotZ(Vector3 target){

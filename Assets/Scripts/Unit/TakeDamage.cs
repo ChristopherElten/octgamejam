@@ -3,14 +3,14 @@ using System.Collections;
 
 public class TakeDamage : MonoBehaviour {
 
-	private Unit myUnit;
+	int health;
 
-	void Awake(){
-		myUnit = GetComponent<Unit>();
-	}
-	
 	public void ApplyDamage(int damage){
-		myUnit.health -= damage;
+		health -= damage;
+
+		if (health <= 0){
+			Destroy(this.gameObject);
+		}
 	}
 
 }

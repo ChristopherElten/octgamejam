@@ -31,6 +31,7 @@ GameObject:
   - 114: {fileID: 11469158}
   - 114: {fileID: 11446050}
   - 114: {fileID: 11435704}
+  - 114: {fileID: 11455652}
   m_Layer: 0
   m_Name: EnemyTemp
   m_TagString: Enemy
@@ -114,8 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a026298b7755b41369b7079b8cce64b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputButtons: 
-  dissableScripts: []
   itemBeingAimed: {fileID: 423154}
   target: {fileID: 0}
 --- !u!114 &11446050
@@ -130,6 +129,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+--- !u!114 &11455652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57d825021e4a48c3be2ba8638d4ef1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 141310, guid: 52edcc4b0f53746f68cd895cc4f13b19, type: 2}
+  launcher: {fileID: 423154}
 --- !u!114 &11469158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,10 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311653e9ce47e47ee8c5f7a9e898e45b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputButtons: 
-  dissableScripts: []
-  projectilePrefab: {fileID: 141310, guid: 52edcc4b0f53746f68cd895cc4f13b19, type: 2}
-  launcher: {fileID: 423154}
   secondsBetweenShots: 1
 --- !u!212 &21266260
 SpriteRenderer:

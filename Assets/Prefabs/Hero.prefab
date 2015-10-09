@@ -44,14 +44,15 @@ GameObject:
   - 50: {fileID: 5032604}
   - 58: {fileID: 5845826}
   - 114: {fileID: 11443934}
-  - 114: {fileID: 11487918}
   - 114: {fileID: 11492286}
-  - 114: {fileID: 11499292}
+  - 114: {fileID: 11491870}
   - 114: {fileID: 11429334}
   - 114: {fileID: 11413732}
   - 114: {fileID: 11495122}
   - 114: {fileID: 11465298}
   - 114: {fileID: 11461860}
+  - 114: {fileID: 11442480}
+  - 114: {fileID: 11464912}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Player
@@ -137,8 +138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f06421b548c482092197297dea9c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputButtons: 
-  dissableScripts: []
   itemBeingAimed: {fileID: 421998}
   target: {fileID: 0}
 --- !u!114 &11429334
@@ -152,9 +151,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ceb05b95421f404c989b96c89c81730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputButtons: 04000000
-  dissableScripts: []
   cursorIcon: {fileID: 447950}
+--- !u!114 &11442480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a65443babc86646b49eaabef273cc180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputButtons: 00000000010000000200000003000000
 --- !u!114 &11443934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,6 +191,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675718de7510e445882e423dc4741b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11464912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6e8d5f1b3a64efdb46a7e04e189b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 141310, guid: 13e251a826f4d4cb997fca4950edfd2f, type: 2}
+  launcher: {fileID: 421998}
+  level: 1
 --- !u!114 &11465298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,8 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c9d78e6311c04d4bb6e07201554825e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
---- !u!114 &11487918
+--- !u!114 &11491870
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -202,13 +224,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 164908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12e29748b743441d4b4bd07d35e6c476, type: 3}
+  m_Script: {fileID: 11500000, guid: 16ed7d5dd327f486da23b91fbbbaa0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedX: 2
+  speedY: 2
   inputButtons: 00000000010000000200000003000000
-  dissableScripts: []
-  speedX: 5
-  speedY: 5
 --- !u!114 &11492286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -230,7 +251,7 @@ MonoBehaviour:
   bottomPosition: {x: 0, y: 0}
   rightPosition: {x: 0, y: 0}
   leftPosition: {x: 0, y: 0}
-  collisionRadius: 10
+  collisionRadius: .100000001
   debugCollisionColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &11495122
 MonoBehaviour:
@@ -244,22 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputButtons: 04000000
-  dissableScripts: []
-  projectilePrefab: {fileID: 141310, guid: 13e251a826f4d4cb997fca4950edfd2f, type: 2}
-  launcher: {fileID: 421998}
---- !u!114 &11499292
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bbeeb7fe22b645beb22279ed12ceb39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputButtons: 00000000010000000200000003000000
-  dissableScripts: []
+  shotsPerSecond: 1
 --- !u!212 &21207880
 SpriteRenderer:
   m_ObjectHideFlags: 1
