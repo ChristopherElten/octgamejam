@@ -1,11 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AutoFire : Shoot {
+public class AutoFire : MonoBehaviour {
 
 	[SerializeField] float secondsBetweenShots;
+	protected Shoot shoot;
+
+	protected void Awake(){
+		shoot = GetComponent<Shoot>();
+	}
 
 	void Start(){
-		InvokeRepeating("ShootProjectile", 2, secondsBetweenShots);
+		InvokeRepeating("Fire", 2, secondsBetweenShots);
+	}
+
+	void Fire(){
+		shoot.ShootProjectile();
+	}
+
+	void OnDisable(){
+		CancelInvoke("Fire");
 	}
 }

@@ -9,10 +9,11 @@ public class ProjectileDamage : MonoBehaviour {
 	[SerializeField] int strength;
 
 	void OnTriggerEnter2D(Collider2D other){
-		if ((other.gameObject.tag == "Enemy" && damageEnemy) || (other.gameObject.tag == "Player" && damagePlayer)){
-			Debug.Log("Hit!");
+		if ((other.gameObject.tag == "Enemy" && damageEnemy) || 
+		    (other.gameObject.tag == "Player" && damagePlayer) || 
+		    (other.gameObject.tag == "Civilian" && (damagePlayer || damageEnemy))){
 			other.gameObject.SendMessage("ApplyDamage", strength);
-			Destroy(this.gameObject);
+			Destroy(gameObject);
 		}
 	}
 }

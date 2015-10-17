@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Shoot : AbstractBehaviour {
+public class Shoot : MonoBehaviour {
 
-	[SerializeField] GameObject projectilePrefab;
-	[SerializeField] Transform launcher;
+	[SerializeField] protected GameObject projectilePrefab;
+	[SerializeField] protected Transform launcher;
 
-	protected void ShootProjectile(){
+	public virtual void ShootProjectile(){
 		Instantiate(projectilePrefab, launcher.transform.position, launcher.transform.rotation);
 	}
 }

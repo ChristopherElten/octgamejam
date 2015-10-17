@@ -5,6 +5,13 @@ public class CursorIcon : AbstractBehaviour {
 
 	[SerializeField] Transform cursorIcon;
 
+	protected InputState inputState;
+	
+	protected override void Awake(){
+		base.Awake();
+		inputState = GetComponent<InputState>();
+	}
+
 	void Update () {
 
 		var cursorX = inputState.cursorPos.x;
