@@ -17,4 +17,8 @@ public class AutoFire : MonoBehaviour {
 	void Fire(){
 		shoot.ShootProjectile();
 	}
+
+	void OnDisable(){
+		CancelInvoke("Fire");
+	}
 }

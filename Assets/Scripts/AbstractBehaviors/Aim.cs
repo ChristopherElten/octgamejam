@@ -16,4 +16,8 @@ public class Aim : MonoBehaviour {
 
 		return Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
 	}
+
+	public void changeTarget(Transform newTarget){
+		target = newTarget;
+	}
 }
